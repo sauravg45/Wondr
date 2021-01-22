@@ -48,6 +48,11 @@
                 $("#main").show(500);
             });
 
+            $("#enter2").click(function () {
+                $("#block").slideUp(450, "swing");
+                $("#main").show(500);
+            });
+
 
 
             // Wrap every letter in a span
@@ -121,6 +126,17 @@
             });
         });    
     </script>
+
+<script>
+    $(document).ready(function () {
+        $("#manufacturerButton").click(function () {
+            $("#block").slideUp(450, "swing");
+                $("#main").show(500);
+            $("#main").hide("slide", { direction: "left" }, 1);
+            $("#main2").show("slide", { direction: "right" }, 1);
+        });
+    });    
+</script>
 
     <script>
         $(document).ready(function () {
@@ -308,6 +324,7 @@
 
         .ml {
             font-weight: 700;
+            color: white;
             /* font-size: 72px; */
             /* text-transform: uppercase; */
             letter-spacing: 0.2em;
@@ -537,43 +554,77 @@
         .dotsContainer li:nth-child(20) {
             animation-delay: -4.0s;
         }
+
+        .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 25px 60px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: fixed;
+  
+}
+
+
+.button5 {
+    background-color: #ef8480;
+  color: black;
+  font-weight: 500;
+  border: 3px solid black;
+}
+
+.button5:hover {
+  background-color: black;
+  color: white;
+}
+
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50" onload="draw();">
 
-    <div class="container" id='block' style="min-height:100vh;width:100%;background:none">
+    <div class="container" id='block' style="min-height:100vh;width:100%;background:none ;background-color: #78244c;">
 
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4" style='text-align:center'>
-                <h1 style="text-align: center;font-size:40px;color:#722f37">Wondr</h1>
+                <h1 style="text-align: center;font-size:40px;color:white;margin-top: 8%;">Wondr</h1>
 
-                <p style="font-size:18px;color:#374785;;text-align:center">Reinventing the Fashion Industry</p>
+                <p style="font-size:18px;color:#374785;;text-align:center; color: white;">Reinventing the Fashion Industry</p>
             </div>
             <div class="col-md-4 col-sm-4"></div>
         </div>
-        <div class="row" style="margin-top:100px">
-            <div class="col-sm-8 col-sm-offset-2" style="text-align:center">
+       
+        <div class="row" >
+            <div class="col-sm-8 col-sm-offset-2" style="text-align:center; margin-top:12%">
                 <!-- <h1 id="text2" class="headingWondr" style="font-size:74px;color:#374785;text-align: center">
                     <span class="typed-words big"></span>
                     <span class="ml12"> A New</span>
                 </h1> -->
+                <button class="button button5" id="enter2" style="left: 10px;">BRANDS</button>
                 <h1 class="ml12 ml" style="display: block;">Fashion its time to reset</h1>
                 <h1 class="ml14 ml" style="display: block;">Wondr shaping the future</h1>
+                
+        <button class="button button5" style="right: 10px;" id="manufacturerButton">MANUFACTURERS</button>
 
             </div>
         </div>
         <br><br><br>
         <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12" style="text-align:center; margin-top: 100px;">
+            <!-- <div class="col-md-12 col-lg-12 col-sm-12" style="text-align:center; margin-top: 100px;">
                 <p style="text-align:center"><a href='#' id='enter' style='text-decoration: none;color:#ef8480'>Enter
                         the Website&emsp;<i style="color:#ef8480" class="fa fa-arrow-right"></i></a></p>
-            </div>
+            </div> -->
         </div>
         <br><br><br>
-        <div class="row">
+        <div class="row" style="margin-top: 80px;">
             <form>
-                <div class="col-sm-3 col-sm-offset-4" style="text-align:center">
+                <div class="col-sm-3 col-sm-offset-4" style="text-align:center; " >
                     <input type="text" class="form-control"
                         style="color:white;border:solid 1px #ef8480;background:transparent"
                         placeholder="Enter your e-mail">
